@@ -1,5 +1,5 @@
 `score` <-
-function(items,key=NA,output.scored=FALSE,ID=NA,rel=FALSE){ 
+function(items,key,output.scored=FALSE,ID=NA,rel=FALSE){ 
   t<- as.vector(ID)                                          
   t<- table(ID)  
   if(any(t>1)){ for(i in 1:length(ID)){
@@ -15,8 +15,12 @@ function(items,key=NA,output.scored=FALSE,ID=NA,rel=FALSE){
                
    if(missing(key)){
     warning("No key provided, assuming pre-scored data.")
-    scored <- items
-  } 
+	
+    scored <- apply(items,2, function(XXX){
+                                	if(! is.numeric(XXX)) XXX <- as.numeric(XXX)
+									XXX
+									})
+   } 
   else {
     if(length(key)==ncol(items)) scored <- t(apply(items,1,function(X){ifelse(X==(key),1,0)}))
     else stop("Number of items is not equal to the length of key.")

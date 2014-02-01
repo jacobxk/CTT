@@ -18,17 +18,18 @@ alpha <- (N/(N-1))*(1 - sum(s)/var(X))
 if(itemal){
   alphad <- array(dim=N)
   pbis <- array(dim=N)
+  bis <- array(dim=N)
   for(i in 1:N){
     Xd <- rowSums(items[,-i])
     pvalu <- colMeans(items)
     alphad[i] <- ((N-1)/(N-2))*(1 - sum(s[-i])/var(Xd))
     pbis[i] <- cor(items[,i],Xd)
-    out <- list(N_item=N,N_person=nrow(items),alpha=alpha, scale.mean=mean(X), scale.sd=sd(X),
-                alpha.if.deleted=alphad, pbis=pbis, item.mean=pvalu)
+	bis[i] <- polyserial(Xd, items[,i])
+    out <- list(nItem=N,nPerson=nrow(items),alpha=alpha, scaleMean=mean(X), scaleSD=sd(X),
+                alphaIfDeleted=alphad, pBis=pbis, bis=bis, itemMean=pvalu)
   }
 } 
-else out <- list(N_item=N,N_person=nrow(items),alpha=alpha, scale.mean=mean(X), scale.sd=sd(X))
+else out <- list(nItem=N,nPerson=nrow(items),alpha=alpha, scaleMean=mean(X), scaleSD=sd(X))
 class(out) <- "reliability"
 out
 }
-

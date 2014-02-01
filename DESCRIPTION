@@ -1,12 +1,13 @@
 Package: CTT
 Type: Package
 Title: Classical Test Theory Functions
-Version: 1.0
-Date: 2008-08-26
-Author: John T. Willse, Zhan Shu
+Version: 2.0
+Date: 2014-02-1
+Author: John T. Willse
 Maintainer: John T. Willse <willse@uncg.edu>
 Description: Contains common CTT functions
 License: GPL (>= 2)
-Packaged: Tue Sep 2 13:34:45 2008; jtwillse
+Packaged: 2014-01-24 20:40:56 UTC; jtwillse
+NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2008-09-03 07:52:01
+Date/Publication: 2014-01-25 16:15:25

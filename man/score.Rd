@@ -7,7 +7,7 @@
   This function can also call and return results from function reliability.
 }
 \usage{
-score(items, key = NA, output.scored = FALSE, ID = NA, rel = FALSE)
+score(items, key, output.scored = FALSE, ID = NA, rel = FALSE)
 }
 \arguments{
   \item{items}{ The item responses to be scored }

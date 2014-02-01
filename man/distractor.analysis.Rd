@@ -6,7 +6,7 @@
   This function performs distractor analysis for each item.
 }
 \usage{
-distractor.analysis(items, key = NA, scores = NA, p.table = FALSE, write.csv = NA)
+distractor.analysis(items, key, scores, p.table = FALSE, write.csv)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

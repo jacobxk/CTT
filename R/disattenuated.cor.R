@@ -15,6 +15,6 @@ function(r.xy, r.xx, new.r.xx=1){
      }
      diag(new.r.xy) <- r.xx
      }
-   new.r.xy
+   t(new.r.xy)
 }
 

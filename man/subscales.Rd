@@ -6,7 +6,8 @@
   This convenience function is provided to facilitate extracting subscales from a single set of item responses. 
 }
 \usage{
-subscales(items, scales, scale.names = NA, score.items = FALSE, check.reliability = FALSE, key=NA)
+subscales(items, scales, scale.names = NA, score.items = FALSE,
+          check.reliability = FALSE, key=NA)
 }
 \arguments{
   \item{items}{ The item response (scored or not) }

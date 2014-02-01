@@ -22,7 +22,7 @@ The data given in r.xx should be a vector, with one reliability for each instrum
 The new.r.xx represents a new reliability for each measure. If these values are less than 1, the returned correlation is the value that would be expected with the new reliability. 
 }
 \value{
-If r.xy is a single value a single value is returned. If r.xy is a matrix then a matrix is returned with the reliabilities on the diagonal, the disattenuated correlations in the lower triangle and the original correlations in the upper triangle.
+If r.xy is a single value a single value is returned. If r.xy is a matrix then a matrix is returned with the reliabilities on the diagonal, the disattenuated correlations in the upper triangle and the original correlations in the lower triangle.
 }
 \references{ 
 Spearman, C. (1904). The proof and measurement of association between two things. American Journal of Psychology, 15, 72-101. \cr
