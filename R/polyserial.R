@@ -27,15 +27,19 @@
     
     rho <- (r.xy * s.pop)/sum(dnorm(tau)) 
     
-    if(ml){
+     if(ml){
       negLogLik <- function(par){
     	rho <- par[1]
+		if(rho >= 1) rho <- .99999
+		if(rho <= -1) rho <- -.99999
     	tau <- c(-Inf,par[-1],Inf)
     	tauDenom <- sqrt(1-rho^2)
-    	rhoZ <- rho*z
+		rhoZ <- rho*z
     	pTauStar <- pnorm((tau[y+1] - rhoZ)/tauDenom)
-    	pTauStarLower <- pnorm((tau[y] - rhoZ)/tauDenom) 
-    	-sum(log(dnorm(z))+log(pTauStar - pTauStarLower))
+		pTauStarLower <- pnorm((tau[y] - rhoZ)/tauDenom) 
+		pTauDif <- pTauStar-pTauStarLower
+		pTauDif <- ifelse(pTauDif == 0, .5e-10, pTauDif)
+    	-sum(log(dnorm(z))+log(pTauDif))
       }
       mlEst <- optim(c(rho,tau), negLogLik)	
       rho <- mlEst$par[1]

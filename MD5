@@ -1,8 +1,9 @@
-62d6ba9f68a6d991d060681c774c035c *DESCRIPTION
-6caba6c5c3130542d7049e88373c4e91 *NAMESPACE
+44120d367c6fde05cabc8cc50222094b *DESCRIPTION
+871b65a82fc2d3991230f2bcf812d726 *NAMESPACE
+1d723c81c81b49fcc78478f02ba0a1d2 *R/cttICC.R
 57c16b3e8a2e7afac0300653d4af9f0b *R/disattenuated.cor.R
 c4f3cfc76a9c85d15cb03eb4a5cac21f *R/distractor.analysis.R
-c51e4211d05d143aa96405d6b56f1f5b *R/polyserial.R
+5f994c4b15d4e8196289bf5aa8419d4b *R/polyserial.R
 c8d1c29d19b1313b765c101a397a4151 *R/print.reliability.R
 aece9e0b13fc3ce193070a70cfbf02d9 *R/reliability.R
 6e929106162d0c2899f3c98e09d27c42 *R/score.R
@@ -11,9 +12,10 @@ d51151d12738c0389e137ac0bf8eea28 *R/spearman.brown.R
 328fa75c0dfc665ad62177f340222d63 *R/subscales.R
 09951750ad771cea6710b013de1683dc *data/CTTdata.rda
 b2071fb522e58ead248227e170d79d0e *data/CTTkey.rda
-43b5c5c0fa1a3aa2424f7e9fa2c6ce21 *man/CTT-package.Rd
+def54d7f1dd29f56cccb8f475718b4d6 *man/CTT-package.Rd
 115e57415ee2405b312e0d1eb2e73e42 *man/CTTdata.Rd
 b81225f39b84ecf476e0bea5f8eb8be0 *man/CTTkey.Rd
+d4f8de1767f97ac5477ab40dde253976 *man/cttICC.Rd
 ce17507ad5a42d4298d35f5011da258a *man/disattenuated.cor.Rd
 124a1fd12373c0a5ff5bf3aeed46cbff *man/distractor.analysis.Rd
 e70ea8a02c939e5d909617592ae41a6c *man/polyserial.Rd
