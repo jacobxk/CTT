@@ -6,7 +6,7 @@
  This function performs reliability analyses, providing coefficient alpha and item statistics.
 }
 \usage{
-reliability(items, itemal = TRUE, NA.Delete = TRUE)
+reliability(items, itemal = TRUE, NA.Delete = TRUE, ml = TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -15,6 +15,7 @@ reliability(items, itemal = TRUE, NA.Delete = TRUE)
    If itemal=TRUE, the function will provide item means, item total correlations, and alpha if item is removed.}
   \item{NA.Delete}{If NA.Delete=TRUE (the default) records are deleted listwise if there are missing responses. 
                    If NA.Delete=FALSE all NA values are changed to 0s. }
+  \item{ml}{A logical variable indicating whether the biserial correlation is calculated using a formal maximum likelihood estimator (default) or an ad hoc estimator.}
 }
 \details{
 The input files must be scored files with "0" and "1" or numeric scales (e.g., Likert Type scales). 
@@ -32,7 +33,9 @@ Only basic scale information is returned to the screen. Use str() to view additi
 }
 \references{ Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. Psychometika, 16, 297-334. }
 \author{ John T. Willse, Zhan Shu }
-\seealso{ score }
+\seealso{
+          \code{\link{itemAnalysis}}
+        }
 \examples{
 
 # Scored input (data frame is preferred)

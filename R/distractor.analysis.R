@@ -1,6 +1,8 @@
 `distractor.analysis` <-
 function(items,key,scores,p.table=FALSE,write.csv){
 
+message("You will find additional features and better formatting by using distractorAnalysis().")
+  
 items <- as.data.frame(items)
 if(length(key)==1) key<-c(rep(key,ncol(items)))
 

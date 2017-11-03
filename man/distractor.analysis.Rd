@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Function for item distractor analysis }
 \description{
-  This function performs distractor analysis for each item.
+  This function is deprecated. Use \code{distractorAnalysis} for a more complete distractor analysis.
 }
 \usage{
 distractor.analysis(items, key, scores, p.table = FALSE, write.csv)
@@ -26,6 +26,9 @@ distractor.analysis(items, key, scores, p.table = FALSE, write.csv)
  If p.table=T the tables contain the proportion of respondents who chose each corresponding answer. }
 \references{ Allen, M. J. & Yen, W. M. (1979). Introduction to Measurement Theory. Lon Grove, Illinois: Waveland Press, INC. }
 \author{ John T. Willse, Zhan Shu}
+\seealso{
+   \code{\link{distractorAnalysis}}
+   }
 \examples{
 
 # Example data provided with package
