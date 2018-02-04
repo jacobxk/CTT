@@ -1,9 +1,9 @@
-6203ab3892c838e68e41ace98e374190 *DESCRIPTION
+782d11e7133bc44c0cf25e58489020df *DESCRIPTION
 f8ee1b9e5cd66d1dbec99dcb0947ebc7 *NAMESPACE
 1d723c81c81b49fcc78478f02ba0a1d2 *R/cttICC.R
 57c16b3e8a2e7afac0300653d4af9f0b *R/disattenuated.cor.R
 1f6ecdb046c79a5fbaef3ddc0d44f23f *R/distractor.analysis.R
-f44f571b1651d68682356b56fd61e60a *R/distractorAnalysis.R
+277962e451152e1d31a2e593c1b58e44 *R/distractorAnalysis.R
 1ea0d2d41fe8cf9e3ab3414f63b26951 *R/itemAnalysis.R
 5f994c4b15d4e8196289bf5aa8419d4b *R/polyserial.R
 aaf466a302825f67bc87edfc1cc982bb *R/print.itemAnalysis.R
@@ -12,7 +12,7 @@ fef615b252f9aa440f33e399d91bd945 *R/reliability.R
 d04667790a13fde7b46a78d7d28408f5 *R/score.R
 88ce24ded95ae366790c5e75bdddc1ff *R/score.transform.R
 d51151d12738c0389e137ac0bf8eea28 *R/spearman.brown.R
-328fa75c0dfc665ad62177f340222d63 *R/subscales.R
+a725d9bade67fb507b8905bd5c3a43a0 *R/subscales.R
 09951750ad771cea6710b013de1683dc *data/CTTdata.rda
 b2071fb522e58ead248227e170d79d0e *data/CTTkey.rda
 def54d7f1dd29f56cccb8f475718b4d6 *man/CTT-package.Rd
@@ -21,7 +21,7 @@ b81225f39b84ecf476e0bea5f8eb8be0 *man/CTTkey.Rd
 d4f8de1767f97ac5477ab40dde253976 *man/cttICC.Rd
 ce17507ad5a42d4298d35f5011da258a *man/disattenuated.cor.Rd
 e0d05c93dbc86f5c2bb7c3d1d0ad6221 *man/distractor.analysis.Rd
-db419ae09303d378cac471671fe05ce0 *man/distractorAnalysis.Rd
+f824ecd45416cdbd3af38287dd7f38c6 *man/distractorAnalysis.Rd
 07f9c61f307532dbd56b8f14b77f5bf7 *man/itemAnalysis.Rd
 e70ea8a02c939e5d909617592ae41a6c *man/polyserial.Rd
 e0b88e09a1e917963322dff6b1fe2b97 *man/reliability.Rd

@@ -9,7 +9,7 @@ if(score.items) {
 }
 
 sets <- apply(scales,2,function(XXX) items[,XXX==1])
-suppressWarnings(if(! is.na(scale.names)) names(sets) <- scale.names  else names(sets)<-paste("Q.",c(seq(1:n.scales)),sep=""))
+suppressWarnings(if(! any(is.na(scale.names))) names(sets) <- scale.names  else names(sets)<-paste("Q.",c(seq(1:n.scales)),sep=""))
 
 if(check.reliability){
   for(i in 1:n.scales){

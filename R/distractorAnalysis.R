@@ -1,6 +1,6 @@
 `distractorAnalysis` <-
-function(items, key, scores, nGroups=4, multiKeySep="none",
-         multiKeyScore=c("or","poly"), validResp, csvReport, pTable=TRUE){
+function(items, key, scores, nGroups=4, defineGroups, multiKeySep="none",
+         multiKeyScore=c("or","poly"), validResp, csvReport, pTable=TRUE, digits){
 
 items <- as.data.frame(items)
 
@@ -8,9 +8,12 @@ mKS <- multiKeySep
 mKSc <- multiKeyScore
 rm(multiKeySep)
 rm(multiKeyScore)
-#if(length(key)==1){
-#  key<-c(rep(key,ncol(items)))
-#}
+
+hasUserGroups <- ! missing(defineGroups)
+if(hasUserGroups) if(! sum(defineGroups) == 1){
+  hasUserGroups <- FALSE
+  warning(paste0("Your user defined groups do not sum to 1. Using nGroups = ", nGroups, " instead."))
+}
 
 if(missing(key)) warning("Answer key is not provided")
     else{
@@ -22,7 +25,11 @@ if(missing(key)) warning("Answer key is not provided")
 if(missing(scores)) scores<- as.data.frame(score(items,key,
                                       multiKeySep=mKS, multiKeyScore=mKSc)$score)
 
-quantMaker  <- (1:(nGroups-1))/nGroups
+if(hasUserGroups){
+  quantMaker  <- cumsum(defineGroups[-length(defineGroups)])
+} else{
+  quantMaker  <- (1:(nGroups-1))/nGroups
+}
 
 labelBaby <- c("lower",
                 paste0("mid",as.character(trunc(100*quantMaker[-1]))),"upper")
@@ -107,10 +114,18 @@ labelBaby <- c("lower",
      }                 
      #cat(length(correct),"\n",rownames(outTmp),length(choiceSum),length(choiceSum/sum(choiceSum)),
          #length(pBis), length(pOutTmp$upper), "dim", colnames(pOutTmp),"\n")
+     if(missing(digits)){
      frntTmp <- data.frame(correct, key = rownames(outTmp),n = choiceSum, 
                            rspP = choiceSum/sum(choiceSum), pBis, 
                            discrim = pOutTmp$upper - pOutTmp$lower)
      out[[i]] <- cbind(frntTmp,outTmp)
+     } else{
+     frntTmp <- data.frame(correct, key = rownames(outTmp),n = choiceSum, 
+                           rspP = round(choiceSum/sum(choiceSum),digits), pbis = round(pBis,digits), 
+                           discrim = round(pOutTmp$upper - pOutTmp$lower,digits))   
+     out[[i]] <- cbind(frntTmp,round(outTmp,digits))
+     }
+     
    }
    
 names(out) <- colnames(items)
