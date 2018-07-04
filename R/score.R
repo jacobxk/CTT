@@ -45,7 +45,7 @@ function(items,key,output.scored=FALSE,ID=NA,rel=FALSE,multiKeySep="none",
     }  
     }else stop("Number of items is not equal to the length of key.")
   }
- scores <- rowSums(scored)
+ scores <- rowSums(scored, na.rm = TRUE)
  names(scores)<-paste("P",c(seq(1:nrow(items))),sep="")
  if(!rel==FALSE)reli<-reliability(scored)
  if(output.scored==FALSE & rel==FALSE) out<-list(score=scores)
